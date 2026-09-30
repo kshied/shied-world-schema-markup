@@ -1,0 +1,877 @@
+# Copyright (C) 2026 SHIED WORLD
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: SHIED WORLD Schema Markup 1.0.0\n"
+"Report-Msgid-Bugs-To: https://shiedworld.com/\n"
+"POT-Creation-Date: 2026-09-28 22:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: shied-world-schema-markup\n"
+"X-Generator: SMSW pot generator\n"
+
+#: includes/class-smsw-ai-suggestion.php:461
+msgid "%1$d models were read from %2$s and are current."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:176
+msgid "@type value"
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:51
+msgid "A category or tag contains the word recipe."
+msgstr ""
+
+#: admin/class-smsw-settings.php:512
+msgid "AI BYOK"
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1478
+msgid "AI provider returned an error. Check your API key and quota."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1453
+msgid "AI request failed. Check your key, quota, and try again."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1472
+msgid "AI request failed: %s"
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1484
+msgid "AI returned an empty response."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:184
+msgid "AI suggestion failed."
+msgstr ""
+
+#: admin/class-smsw-settings.php:841
+msgid "API key"
+msgstr ""
+
+#: admin/class-smsw-settings.php:516
+msgid "About"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1303
+msgid "About the Creator"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:226
+#: admin/class-smsw-settings.php:636
+#: admin/class-smsw-settings.php:1041
+msgid "Add Schema Block"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:206
+msgid "Add schema blocks for this content. Each block outputs structured JSON-LD markup."
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:200
+msgid "Add your own API key under Schema Markup > AI BYOK."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:209
+msgid "Advanced fields"
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:490
+msgid "Another attempt follows shortly."
+msgstr ""
+
+#: includes/class-smsw-schema-validator.php:56
+msgid "Article should include a headline and datePublished."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:183
+msgid "Asking AI..."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:193
+msgid "Automatic copy failed. Please manually select and copy the text from the preview box."
+msgstr ""
+
+#: admin/class-smsw-settings.php:829
+msgid "Bring Your Own Key. Paste a key for OpenAI, Anthropic, Gemini, DeepSeek, Groq, or OpenRouter. Keys are encrypted with openssl_encrypt using salt material from wp-config.php and are never stored in plain text. Each provider keeps its own separate key, and there is no shared fallback key."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:465
+msgid "Built-in defaults for %s: the live list was not available."
+msgstr ""
+
+#: admin/class-smsw-settings.php:668
+msgid "Built-in schema.org types and common properties available in the block builder."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1140
+msgid "Chat about SEO services on WhatsApp"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1139
+msgid "Chat on WhatsApp"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:231
+msgid "Check this page\\"
+msgstr ""
+
+#: admin/class-smsw-settings.php:705
+msgid "Choose which post types show the SHIED WORLD Schema Markup meta box. Defaults: Post and Page."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1379
+msgid "Clear, direct communication throughout the project."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1047
+msgid "Click Refresh JSON Preview to see the final merged output."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1368
+msgid "Compete and rank across your entire country\\"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1225
+msgid "Connect with the plugin author on LinkedIn"
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:91
+msgid "Content includes an ordered list with 3 or more steps."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:194
+msgid "Copied to clipboard."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:200
+msgid "Copied!"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:202
+msgid "Copied. Opening Google Rich Results Test."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:195
+msgid "Copied. Paste into the validator that is about to open."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:199
+msgid "Copy"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1032
+msgid "Copy and Test with Google Rich Results"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:237
+#: admin/class-smsw-settings.php:1035
+msgid "Copy and Validate with Schema.org"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1017
+msgid "Copy your current site schema below, then paste it into either tester. Rich Results checks Google supported types. Schema.org checks the full vocabulary."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1796
+msgid "Could not parse the AI suggestion. Try again."
+msgstr ""
+
+#: includes/class-smsw-schema-types.php:50
+#: includes/class-smsw-schema-types.php:71
+msgid "Custom / Other"
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:257
+msgid "Default checked against the Anthropic models overview. Pick another if your account does not offer it."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:259
+msgid "Default checked against the DeepSeek list models response. Pick another if your account does not offer it."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:258
+msgid "Default checked against the Gemini models list. Pick another if your account does not offer it."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:260
+msgid "Default checked against the Groq supported models page. Pick another if your account does not offer it."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:256
+msgid "Default checked against the OpenAI model catalog. Pick another if your account does not offer it."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:261
+msgid "Default checked against the OpenRouter models list. Pick another if your account does not offer it."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:175
+msgid "Delete"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1085
+msgid "Delete all plugin data on uninstall"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:179
+msgid "Delete this schema block?"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1363
+msgid "Digital Product SEO"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:186
+#: admin/class-smsw-admin-menu.php:196
+#: admin/class-smsw-meta-box.php:189
+msgid "Dismiss"
+msgstr ""
+
+#: shied-world-schema-markup.php:71
+msgid "Documentation"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:174
+msgid "Duplicate"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1355
+msgid "E-commerce SEO"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1327
+msgid "Email Us"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1075
+msgid "Enable frontend JSON-LD output"
+msgstr ""
+
+#: admin/class-smsw-settings.php:752
+msgid "Enable rule-based suggestions"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:173
+msgid "Enabled"
+msgstr ""
+
+#: admin/class-smsw-settings.php:674
+msgid "Enter any @type and paste raw JSON-LD for full control."
+msgstr ""
+
+#: includes/class-smsw-schema-validator.php:51
+msgid "Event should include a startDate."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1378
+msgid "Experience working with local service businesses across the UK, Ireland, Australia, and North America."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1122
+msgid "Fiverr"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1213
+msgid "Follow SHIED WORLD on Facebook"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1207
+msgid "Follow SHIED WORLD on Instagram"
+msgstr ""
+
+#: admin/class-smsw-settings.php:514
+#: admin/class-smsw-settings.php:1067
+msgid "General"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:197
+msgid "Get AI Suggestion"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1384
+msgid "Get professional SEO support from SHIED WORLD across multiple specializations. Reach out through any of the platforms below."
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:131
+msgid "Go to Schema Blocks"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1377
+msgid "Hands-on SEO work, directly from the specialist handling your project."
+msgstr ""
+
+#: admin/class-smsw-settings.php:868
+msgid "Hide API key"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1124
+msgid "Hire SEO services on Fiverr"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1132
+msgid "Hire SEO services on Upwork"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1123
+msgid "Hire on Fiverr"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1131
+msgid "Hire on Upwork"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1312
+msgid "How It Was Built"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1360
+msgid "Improve video discoverability and channel growth through search optimization."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1307
+msgid "In the age of AI-powered search, structured schema markup has become more important than ever for helping search engines and AI systems understand your content correctly."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1371
+msgid "International Ranking SEO"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:68
+msgid "Invalid schema type."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1313
+msgid "It was developed while learning web development, combining personal knowledge with AI-assisted development, and using the full official schema.org vocabulary as the single source of truth for every schema type and property included in this plugin, ensuring accuracy and completeness rather than a hand-picked limited subset."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:201
+msgid "Loading full properties..."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1351
+msgid "Local SEO"
+msgstr ""
+
+#: admin/class-smsw-settings.php:744
+msgid "Local rule-based suggestions on the post edit screen. No external API calls."
+msgstr ""
+
+#: includes/class-smsw-schema-validator.php:61
+msgid "LocalBusiness should include an address or telephone number."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1319
+msgid "Looking for SEO help? Check the %s above."
+msgstr ""
+
+#: admin/class-smsw-settings.php:888
+msgid "Model"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1308
+msgid "Most existing schema markup plugins only offer a small number of schema types for free and lock the rest behind a paid tier. Most users prefer not to deal with card-based subscription payments for something they could otherwise access freely."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1372
+msgid "Multi-region SEO strategy to rank across global markets."
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:59
+msgid "Multiple headings look like questions."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1367
+msgid "National Ranking SEO"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1383
+msgid "Need SEO Services?"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1169
+msgid "Need SEO Services? Contact Via:"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:180
+msgid "New Schema Block"
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1013
+msgid "No AI API key is saved. Add your own key under Schema Markup > AI BYOK."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:482
+msgid "No API key is saved for %s yet, so built-in defaults are offered. Save a key to get the provider\\"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:181
+msgid "No matching types."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:818
+msgid "No models available for this provider."
+msgstr ""
+
+#: admin/class-smsw-settings.php:914
+msgid "No models available. Check your API key and quota."
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:134
+msgid "Note:"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:192
+msgid "Nothing to copy yet. Generate a preview first."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:182
+msgid "Nothing to output. Enable at least one site or page schema block."
+msgstr ""
+
+#: admin/class-smsw-settings.php:944
+msgid "Off by default: the plugin sends the post title, all headings, a short excerpt and the URL. That is enough to pick a schema type and costs far fewer tokens. Turn this on to send the post body as well. Uses significantly more tokens and may exceed free-tier API limits faster."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1356
+msgid "Optimize product pages and category pages to drive organic sales."
+msgstr ""
+
+#: admin/class-smsw-settings.php:761
+msgid "Ordered list with 3+ steps -> HowTo"
+msgstr ""
+
+#: admin/class-smsw-settings.php:758
+msgid "Page about -> AboutPage"
+msgstr ""
+
+#: admin/class-smsw-settings.php:759
+msgid "Page contact -> ContactPage"
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:67
+msgid "Page slug or title contains about."
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:75
+msgid "Page slug or title contains contact."
+msgstr ""
+
+#: admin/class-smsw-settings.php:847
+#: admin/class-smsw-settings.php:858
+msgid "Paste your API key"
+msgstr ""
+
+#: admin/class-smsw-settings.php:875
+msgid "Paste your API key and click Save AI Settings. Saved keys appear as masked previews for the selected provider; providers without a saved key have an empty field. Enter a new key to replace the saved one, or empty the field and save to delete the stored key."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:785
+#: includes/class-smsw-ai-suggestion.php:789
+#: includes/class-smsw-ai-suggestion.php:994
+#: includes/class-smsw-schema-output.php:107
+#: includes/class-smsw-schema-output.php:111
+#: includes/class-smsw-schema-output.php:159
+#: includes/class-smsw-schema-output.php:163
+msgid "Permission denied."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1088
+msgid "Plugin version:"
+msgstr ""
+
+#: admin/class-smsw-settings.php:510
+#: admin/class-smsw-settings.php:704
+msgid "Post Type Settings"
+msgstr ""
+
+#: admin/class-smsw-settings.php:756
+msgid "Post category/tag contains recipe -> Recipe"
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:83
+msgid "Post has an author and published date."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1090
+msgid "Post not found."
+msgstr ""
+
+#: admin/class-smsw-settings.php:762
+msgid "Post type contains portfolio/project -> CreativeWork"
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:99
+msgid "Post type slug contains portfolio or project."
+msgstr ""
+
+#: admin/class-smsw-settings.php:760
+msgid "Post with author and date -> Article"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:198
+#: admin/class-smsw-meta-box.php:242
+msgid "Preview"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1051
+msgid "Preview shows saved site schema merged into one @graph. From a post, use the same copy buttons in the meta box to test that post."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1240
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/class-smsw-schema-validator.php:46
+msgid "Product should include offers or price information for rich results."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:178
+msgid "Properties"
+msgstr ""
+
+#: admin/class-smsw-settings.php:832
+msgid "Provider"
+msgstr ""
+
+#: admin/class-smsw-settings.php:757
+msgid "Question-style headings -> FAQPage"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1352
+msgid "Rank higher in local search results and Google Maps for your business area."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:177
+msgid "Raw JSON-LD"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1038
+msgid "Refresh JSON Preview"
+msgstr ""
+
+#: includes/class-smsw-schema-validator.php:66
+msgid "Review should include a reviewRating."
+msgstr ""
+
+#: admin/class-smsw-settings.php:515
+msgid "SEO Services"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1320
+msgid "SEO Services tab"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1364
+msgid "SEO strategy for digital products, courses, and downloadable content."
+msgstr ""
+
+#: admin/class-smsw-admin-bar.php:115
+#: admin/class-smsw-admin-menu.php:104
+#: admin/class-smsw-meta-box.php:72
+#: admin/class-smsw-settings.php:547
+#: admin/class-smsw-settings.php:600
+#: admin/class-smsw-settings.php:1298
+msgid "SHIED WORLD Schema Markup"
+msgstr ""
+
+#: includes/class-smsw-block-sanitizer.php:53
+msgid "SHIED WORLD Schema Markup could not save: block %d is invalid."
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:291
+msgid "SHIED WORLD Schema Markup could not save: invalid JSON payload from the editor."
+msgstr ""
+
+#: includes/class-smsw-block-sanitizer.php:176
+msgid "SHIED WORLD Schema Markup could not save: invalid JSON syntax in %1$s (%2$s)."
+msgstr ""
+
+#: includes/class-smsw-block-sanitizer.php:225
+msgid "SHIED WORLD Schema Markup could not save: invalid JSON syntax in %s."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1304
+msgid "SHIED WORLD Schema Markup was created by Kazi MD Abdulla Al Shied, an SEO specialist and the founder of SHIED WORLD, an agency focused on WordPress Development and Search Engine Optimization-SEO."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1415
+msgid "SHIED WORLD: Local, General & Ecommerce SEO Services"
+msgstr ""
+
+#: admin/class-smsw-settings.php:948
+msgid "Save AI Settings"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1096
+msgid "Save General Settings"
+msgstr ""
+
+#: admin/class-smsw-settings.php:727
+msgid "Save Post Type Settings"
+msgstr ""
+
+#: admin/class-smsw-settings.php:641
+msgid "Save Site Schema"
+msgstr ""
+
+#: admin/class-smsw-settings.php:765
+msgid "Save Suggestion Settings"
+msgstr ""
+
+#: admin/class-smsw-admin-bar.php:112
+msgid "Schema"
+msgstr ""
+
+#: admin/class-smsw-settings.php:509
+#: admin/class-smsw-settings.php:667
+msgid "Schema Library"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:105
+#: admin/class-smsw-meta-box.php:86
+msgid "Schema Markup"
+msgstr ""
+
+#: admin/class-smsw-admin-notices.php:64
+msgid "Schema Markup recommended properties:"
+msgstr ""
+
+#: admin/class-smsw-admin-bar.php:124
+msgid "Schema Settings"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:146
+msgid "Schema blocks:"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:171
+msgid "Schema type"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:172
+msgid "Search and select a schema type..."
+msgstr ""
+
+#: admin/class-smsw-settings.php:941
+msgid "Send full post content to AI suggestions"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1386
+msgid "Services"
+msgstr ""
+
+#: shied-world-schema-markup.php:52
+msgid "Settings"
+msgstr ""
+
+#: admin/class-smsw-settings.php:866
+#: admin/class-smsw-settings.php:867
+msgid "Show API key"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:204
+msgid "Show fewer fields"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:203
+msgid "Show more fields"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:208
+msgid "Show more fields (%d)"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1046
+msgid "Site JSON-LD Preview (merged @graph)"
+msgstr ""
+
+#: admin/class-smsw-settings.php:508
+#: admin/class-smsw-settings.php:618
+msgid "Site Schema"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:188
+#: admin/class-smsw-meta-box.php:181
+msgid "Suggested Schema Type"
+msgstr ""
+
+#: admin/class-smsw-settings.php:511
+#: admin/class-smsw-settings.php:743
+msgid "Suggestion Engine"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1089
+msgid "Supported placeholders:"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1241
+msgid "Terms & Conditions"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:234
+msgid "Test This Page\\"
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1678
+msgid "The AI response was cut off before it finished. Try again, or choose a model with a larger output limit."
+msgstr ""
+
+#: admin/class-smsw-settings.php:280
+msgid "The API key for %s was encrypted and saved. The AI suggestion feature is ready to use it."
+msgstr ""
+
+#: admin/class-smsw-settings.php:269
+msgid "The new API key for %s could not be encrypted, so it was not saved. Check that the PHP OpenSSL extension is enabled and that wp-config.php defines the WordPress salts."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:486
+msgid "The provider could not be reached from this server."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:472
+msgid "The provider refused the saved key (HTTP %d): check or re-enter it."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:476
+msgid "The provider replied with HTTP status %d."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:492
+msgid "The reply listed no text model this plugin can use."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:488
+msgid "The reply was not readable as JSON."
+msgstr ""
+
+#: admin/class-smsw-settings.php:312
+msgid "The saved API key for %s cannot be decoded on this site, usually because the WordPress salts in wp-config.php changed. Enter the key again to replace it."
+msgstr ""
+
+#: admin/class-smsw-settings.php:256
+msgid "The saved API key for %s was removed."
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:190
+msgid "This page already has good schema coverage."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1310
+msgid "This plugin was built to give the entire WordPress community a genuinely complete, unrestricted, fully free schema markup solution, with no artificial limits on which schema types are available. Every schema type supported by this plugin, 765+ of them based on the official schema.org vocabulary, is available completely free, with no premium tier and no paid upgrade required."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:484
+msgid "This provider has no model list endpoint, so built-in defaults are offered."
+msgstr ""
+
+#: admin/class-smsw-settings.php:620
+msgid "This schema outputs on every page of the site."
+msgstr ""
+
+#: admin/class-smsw-settings.php:548
+#: admin/class-smsw-settings.php:1299
+msgid "Universal JSON-LD schema markup for your WordPress site."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:810
+msgid "Unknown AI provider requested."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1130
+msgid "Upwork"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:185
+msgid "Use AI suggestion"
+msgstr ""
+
+#: admin/class-smsw-settings.php:621
+msgid "Use it for Organization, WebSite, LocalBusiness, and other global entities. It merges with page-level blocks into a single @graph output."
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:186
+msgid "Use this suggestion"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:197
+msgid "Validate This Schema"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:230
+msgid "Validate Your Schema"
+msgstr ""
+
+#: admin/class-smsw-settings.php:513
+#: admin/class-smsw-settings.php:1016
+msgid "Validation"
+msgstr ""
+
+#: admin/class-smsw-admin-bar.php:134
+msgid "View Live Preview"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1326
+msgid "Visit SHIED WORLD"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1147
+msgid "Visit shiedworld.com"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1219
+msgid "Visit the SHIED WORLD company page on LinkedIn"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:191
+msgid "Warning:"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1146
+msgid "Website"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1138
+msgid "WhatsApp"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1306
+msgid "Why This Plugin Was Built"
+msgstr ""
+
+#: admin/class-smsw-settings.php:1396
+msgid "Why Work With SHIED WORLD"
+msgstr ""
+
+#: admin/class-smsw-settings.php:755
+msgid "WooCommerce product -> Product"
+msgstr ""
+
+#: includes/class-smsw-suggestion-engine.php:43
+msgid "WooCommerce product detected."
+msgstr ""
+
+#: includes/class-smsw-ai-suggestion.php:1006
+msgid "You do not have permission to request an AI suggestion for this post."
+msgstr ""
+
+#: admin/class-smsw-settings.php:1359
+msgid "YouTube SEO"
+msgstr ""
+
+#: admin/class-smsw-admin-menu.php:47
+#: admin/class-smsw-admin-menu.php:56
+#: includes/class-smsw-schema-output.php:51
+msgid "Your session expired. Reload this page and try again."
+msgstr ""
+
+#: includes/class-smsw-block-sanitizer.php:179
+#: includes/class-smsw-block-sanitizer.php:220
+#: includes/class-smsw-schema-validator.php:168
+msgid "block %d"
+msgstr ""
+
+#: admin/class-smsw-meta-box.php:170
+msgid "× Close Schema Builder"
+msgstr ""

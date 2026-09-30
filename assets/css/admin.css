@@ -1,0 +1,1555 @@
+/**
+ * SHIED WORLD Schema Markup admin theme.
+ * Palette: #FFFFFF, #EAF6FF, #2271B1, #1A1A1A, #D0E5F5
+ */
+
+/* Settings page + meta box shared theme (dashicon used for admin menu) */
+.smsw-wrap,
+.smsw-metabox {
+	--smsw-bg: #FFFFFF;
+	--smsw-accent: #2271B1;
+	--smsw-accent-hover: #2E85C1;
+	--smsw-panel: #EAF6FF;
+	--smsw-heading: #111111;
+	--smsw-body: #111111;
+	--smsw-border: #D0E5F5;
+	--smsw-font-base: 15px;
+}
+
+.smsw-wrap {
+	background: var(--smsw-bg);
+	color: var(--smsw-body);
+	padding: 20px 24px 32px;
+	margin: 20px 20px 20px 0;
+	border: 1px solid var(--smsw-border);
+	box-sizing: border-box;
+}
+
+.smsw-settings-header {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 24px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--smsw-border);
+}
+
+.smsw-settings-heading h1 {
+	color: var(--smsw-heading) !important;
+	margin: 0 0 6px;
+	padding: 0;
+	font-size: 1.3rem;
+	line-height: 1.3;
+}
+
+.smsw-settings-heading p {
+	margin: 0;
+	color: var(--smsw-body);
+}
+
+.smsw-panel {
+	background: var(--smsw-panel);
+	border: 1px solid var(--smsw-border);
+	padding: 20px 22px;
+	margin-bottom: 20px;
+}
+
+.smsw-panel h2 {
+	color: var(--smsw-heading);
+	margin-top: 0;
+	font-size: 1.1rem;
+}
+
+.smsw-panel p,
+.smsw-panel li {
+	color: var(--smsw-body);
+}
+
+.smsw-placeholder-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 12px;
+	list-style: none;
+	margin: 12px 0 0;
+	padding: 0;
+}
+
+.smsw-placeholder-list code {
+	background: #FFFFFF;
+	color: var(--smsw-accent);
+	padding: 4px 8px;
+	border: 1px solid var(--smsw-border);
+}
+
+.smsw-footer-credit {
+	color: var(--smsw-body);
+	opacity: 0.85;
+	margin-top: 24px;
+	font-size: 12px;
+}
+
+.smsw-footer-credit a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+
+.smsw-footer-credit a:hover,
+.smsw-footer-credit a:focus {
+	color: var(--smsw-accent);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+/* Meta box */
+#smsw_schema_blocks .inside {
+	margin: 0;
+	padding: 0;
+}
+
+.smsw-metabox {
+	background: var(--smsw-bg);
+	color: var(--smsw-body);
+	padding: 16px 18px 18px;
+	font-size: var(--smsw-font-base);
+}
+
+.smsw-metabox-intro {
+	margin: 0 0 14px;
+	color: var(--smsw-body);
+}
+
+.smsw-blocks {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.smsw-block {
+	position: relative;
+	background: var(--smsw-panel);
+	border: 1px solid var(--smsw-border);
+}
+
+.smsw-block-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 16px;
+	cursor: pointer;
+	user-select: none;
+	border-bottom: 1px solid var(--smsw-border);
+	background: var(--smsw-bg);
+}
+
+.smsw-type-autocomplete {
+	position: relative;
+	width: 100%;
+}
+
+.smsw-type-input {
+	font-size: var(--smsw-font-base) !important;
+	padding: 10px 14px !important;
+	height: auto !important;
+	line-height: 1.5 !important;
+	border: 2px solid var(--smsw-border) !important;
+	border-radius: 4px !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
+	background: #fff !important;
+	cursor: text !important;
+}
+
+.smsw-type-input:focus {
+	border-color: var(--smsw-accent) !important;
+	box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.15) !important;
+	outline: none !important;
+}
+
+.smsw-type-dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	max-height: 320px;
+	overflow-y: auto;
+	background: #fff;
+	border: 1px solid var(--smsw-border);
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.smsw-type-group {
+	padding: 8px 14px 4px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #666;
+	background: #f9f9f9;
+	border-bottom: 1px solid var(--smsw-border);
+}
+
+.smsw-type-item {
+	padding: 10px 14px;
+	font-size: var(--smsw-font-base);
+	color: var(--smsw-body);
+	cursor: pointer;
+	border-bottom: 1px solid #f0f0f0;
+	transition: background 0.1s ease;
+}
+
+.smsw-type-item:last-child {
+	border-bottom: none;
+}
+
+.smsw-type-item:hover,
+.smsw-type-item.smsw-type-highlight {
+	background: var(--smsw-panel);
+	color: var(--smsw-accent);
+}
+
+.smsw-block.is-collapsed .smsw-block-header {
+	border-bottom: none;
+}
+
+.smsw-block.is-collapsed .smsw-block-body {
+	display: none;
+}
+
+.smsw-block.is-collapsed .smsw-block-chevron {
+	transform: rotate(-90deg);
+}
+
+.smsw-block-title-wrap {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+	flex-wrap: wrap;
+}
+
+.smsw-block-chevron {
+	color: var(--smsw-accent);
+	font-size: 10px;
+	transition: transform 0.15s ease;
+}
+
+.smsw-block-title {
+	color: var(--smsw-heading);
+	font-size: var(--smsw-font-base);
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.smsw-block-type-badge {
+	display: inline-block;
+	color: var(--smsw-accent);
+	border: 1px solid var(--smsw-accent);
+	padding: 2px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	flex-shrink: 0;
+}
+
+.smsw-name-edit {
+	color: var(--smsw-accent);
+	background: transparent;
+	border: none;
+	padding: 0 2px;
+	font-size: 13px;
+	line-height: 1;
+	cursor: pointer;
+	text-decoration: none;
+	flex-shrink: 0;
+}
+
+.smsw-name-edit:hover {
+	color: var(--smsw-accent-hover);
+	text-decoration: none;
+}
+
+.smsw-name-input {
+	display: none;
+	width: 220px;
+	max-width: 100%;
+	font-size: 13px;
+	padding: 2px 6px;
+	margin: 0;
+}
+
+.smsw-block-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.smsw-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--smsw-body);
+	font-size: 12px;
+	margin: 0;
+}
+
+.smsw-block-body {
+	padding: 14px;
+}
+
+.smsw-field {
+	margin-bottom: 12px;
+}
+
+.smsw-field label {
+	display: block;
+	color: var(--smsw-heading);
+	font-weight: 600;
+	margin-bottom: 4px;
+	font-size: 13px;
+}
+
+.smsw-metabox input.widefat,
+.smsw-metabox textarea.widefat,
+.smsw-metabox select.widefat,
+.smsw-wrap input.widefat,
+.smsw-wrap textarea.widefat,
+.smsw-wrap select.widefat {
+	background: var(--smsw-bg);
+	color: var(--smsw-body);
+	border: 1px solid var(--smsw-border);
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 13px;
+}
+
+.smsw-metabox input.widefat:focus,
+.smsw-metabox textarea.widefat:focus,
+.smsw-metabox select.widefat:focus,
+.smsw-wrap input.widefat:focus,
+.smsw-wrap textarea.widefat:focus,
+.smsw-wrap select.widefat:focus {
+	border-color: var(--smsw-accent);
+	box-shadow: 0 0 0 1px var(--smsw-accent);
+	outline: none;
+}
+
+/* Schema type searchable dropdown */
+.smsw-type-select-wrap {
+	position: relative;
+}
+
+.smsw-type-no-results {
+	display: block;
+	color: var(--smsw-body);
+	font-style: italic;
+	margin-top: 4px;
+	font-size: 13px;
+}
+
+.smsw-properties-title {
+	color: var(--smsw-heading);
+	margin: 4px 0 12px;
+	font-size: 13px;
+}
+
+.smsw-empty-props {
+	color: var(--smsw-body);
+	font-style: italic;
+}
+
+.smsw-metabox-actions {
+	margin: 14px 0 0;
+}
+
+.smsw-btn-primary,
+.smsw-metabox .button.smsw-btn-primary,
+.smsw-wrap .button.smsw-btn-primary {
+	background: var(--smsw-accent) !important;
+	border-color: var(--smsw-accent) !important;
+	color: #FFFFFF !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	font-weight: 600;
+}
+
+.smsw-btn-primary:hover,
+.smsw-metabox .button.smsw-btn-primary:hover,
+.smsw-wrap .button.smsw-btn-primary:hover {
+	background: var(--smsw-accent-hover) !important;
+	border-color: var(--smsw-accent-hover) !important;
+	color: #FFFFFF !important;
+}
+
+.smsw-block-toolbar .button {
+	background: #FFFFFF;
+	border-color: var(--smsw-border);
+	color: var(--smsw-body);
+}
+
+.smsw-block-toolbar .button:hover {
+	border-color: var(--smsw-accent);
+	color: var(--smsw-accent);
+}
+
+.smsw-block-toolbar .smsw-delete:hover {
+	border-color: #e74c3c;
+	color: #e74c3c;
+}
+
+/* Preview and Validate This Schema are solid buttons, matching the
+   Add Schema Block button in the block body. Duplicate and Delete stay
+   as plain text links. */
+.smsw-block-toolbar .button.smsw-header-preview,
+.smsw-block-toolbar .button.smsw-header-validate {
+	background: #00a32a !important;
+	border-color: #00a32a !important;
+	color: #FFFFFF !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	font-weight: 600;
+	font-size: 12px;
+	height: 26px;
+	line-height: 24px;
+	padding: 0 10px;
+	border-radius: 3px;
+}
+
+.smsw-block-toolbar .button.smsw-header-preview:hover,
+.smsw-block-toolbar .button.smsw-header-validate:hover {
+	background: #007f1f !important;
+	border-color: #007f1f !important;
+	color: #FFFFFF !important;
+}
+
+.smsw-block-toolbar .button.smsw-header-preview:focus,
+.smsw-block-toolbar .button.smsw-header-validate:focus {
+	background: #007f1f !important;
+	border-color: #007f1f !important;
+	color: #FFFFFF !important;
+	box-shadow: none !important;
+}
+
+/* Postbox shell around the meta box */
+#smsw_schema_blocks.postbox {
+	border-color: var(--smsw-border);
+}
+
+#smsw_schema_blocks .postbox-header,
+#smsw_schema_blocks .hndle {
+	background: var(--smsw-panel);
+	color: var(--smsw-heading);
+	border-bottom-color: var(--smsw-border);
+}
+
+#smsw_schema_blocks .handle-actions .handlediv,
+#smsw_schema_blocks .handle-actions .toggle-indicator {
+	color: var(--smsw-accent);
+}
+
+/* Settings tabs */
+.smsw-wrap .smsw-nav-tabs {
+	margin: 0 0 20px;
+	border-bottom-color: var(--smsw-border);
+}
+
+.smsw-wrap .smsw-nav-tabs .nav-tab {
+	background: var(--smsw-panel);
+	color: var(--smsw-body);
+	border-color: var(--smsw-border);
+	margin-left: 0;
+	margin-right: 4px;
+}
+
+.smsw-wrap .smsw-nav-tabs .nav-tab-active,
+.smsw-wrap .smsw-nav-tabs .nav-tab:hover {
+	background: #FFFFFF;
+	color: var(--smsw-accent);
+	border-color: var(--smsw-accent) var(--smsw-border) #FFFFFF;
+}
+
+.smsw-notice-panel strong {
+	color: var(--smsw-accent);
+}
+
+.smsw-checklist {
+	list-style: none;
+	margin: 12px 0 0;
+	padding: 0;
+	columns: 2;
+	column-gap: 24px;
+}
+
+.smsw-checklist li {
+	break-inside: avoid;
+	margin: 0 0 8px;
+}
+
+.smsw-checklist label {
+	color: var(--smsw-body);
+	font-size: 13px;
+}
+
+.smsw-rules-list {
+	color: var(--smsw-body);
+	margin-top: 16px;
+	padding-left: 20px;
+}
+
+.smsw-library-props {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.smsw-library-props code {
+	background: #FFFFFF;
+	color: var(--smsw-accent);
+	padding: 3px 7px;
+	border: 1px solid var(--smsw-border);
+}
+
+.smsw-settings-builder {
+	margin-top: 12px;
+}
+
+.smsw-wrap .form-table,
+.smsw-wrap .submit .button-primary,
+.smsw-wrap p.submit .button-primary {
+	background: var(--smsw-accent) !important;
+	border-color: var(--smsw-accent) !important;
+	color: #FFFFFF !important;
+	text-shadow: none !important;
+}
+
+.smsw-wrap .submit .button-primary:hover,
+.smsw-wrap p.submit .button-primary:hover {
+	background: var(--smsw-accent-hover) !important;
+	border-color: var(--smsw-accent-hover) !important;
+}
+
+.smsw-wrap .description {
+	color: var(--smsw-body);
+	font-size: 13px;
+}
+.smsw-suggestion-panel,
+.smsw-ai-panel {
+	background: var(--smsw-panel);
+	border: 1px solid var(--smsw-border);
+	padding: 12px 14px;
+	margin-bottom: 14px;
+}
+
+.smsw-suggestion-type {
+	color: var(--smsw-accent);
+	font-weight: 700;
+	margin: 0 8px;
+}
+
+.smsw-suggestion-reason,
+.smsw-ai-hint {
+	color: var(--smsw-body);
+	display: inline-block;
+	margin-top: 4px;
+}
+
+.smsw-suggestion-actions {
+	margin: 10px 0 0;
+}
+
+.smsw-ai-result {
+	margin-top: 10px;
+	color: var(--smsw-body);
+}
+
+.smsw-validation-section {
+	margin-top: 24px;
+	background: var(--smsw-panel);
+	border: 1px solid var(--smsw-border);
+	padding: 20px;
+}
+
+.smsw-validation-section h3 {
+	margin: 0 0 8px;
+	color: var(--smsw-heading);
+	font-size: 1.1rem;
+}
+
+.smsw-validation-section > p {
+	margin: 0 0 16px;
+	color: var(--smsw-body);
+	font-size: var(--smsw-font-base);
+}
+
+.smsw-validation-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.smsw-validation-buttons .button {
+	flex: 1;
+	min-width: 140px;
+	text-align: center;
+	font-size: var(--smsw-font-base);
+	padding: 8px 12px;
+}
+
+.smsw-preview-panel {
+	position: relative;
+	background: var(--smsw-bg);
+	border: 1px solid var(--smsw-border);
+	padding: 0;
+}
+
+.smsw-preview-panel h4 {
+	margin: 0 0 12px;
+	padding-right: 76px;
+	color: var(--smsw-heading);
+	font-size: 15px;
+}
+
+/* Copy button that sits on the larger lower preview box itself, matching the
+   copy button inside the floating preview box. */
+.smsw-preview-wrap {
+	position: relative;
+}
+
+.smsw-preview-copy {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	height: 22px;
+	line-height: 20px;
+	padding: 0 8px;
+	border: 1px solid var(--smsw-accent);
+	background: var(--smsw-accent);
+	color: #FFFFFF;
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 600;
+	z-index: 2;
+}
+
+.smsw-preview-panel .smsw-preview-copy {
+	top: 8px;
+	right: 8px;
+}
+
+.smsw-preview-copy:hover {
+	background: var(--smsw-accent-hover);
+	border-color: var(--smsw-accent-hover);
+	color: #FFFFFF;
+}
+
+.smsw-preview-copy.is-copied {
+	background: #00a32a;
+	border-color: #00a32a;
+	color: #FFFFFF;
+}
+
+/* Live JSON-LD preview: light background, dark monospace text, resizable */
+.smsw-json-preview {
+	background: #FFFFFF;
+	color: #111111;
+	border: 1px solid var(--smsw-border);
+	border-radius: 0;
+	box-shadow: none;
+	padding: 16px;
+	min-height: 420px;
+	max-height: 800px;
+	overflow: auto;
+	resize: vertical;
+	width: 100%;
+	display: block;
+	white-space: pre-wrap;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	margin: 0;
+	font-family: Consolas, Monaco, 'Courier New', monospace;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.smsw-json-preview:focus {
+	border-color: var(--smsw-accent);
+	box-shadow: 0 0 0 1px var(--smsw-accent);
+	outline: none;
+}
+
+.smsw-block-warnings {
+	background: #fff8e1;
+	border: 1px solid #f0c36d;
+	border-left: 4px solid #f0b429;
+	color: #5d4e00;
+	padding: 10px 14px;
+	margin: 0 0 12px;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.smsw-block-warnings strong {
+	color: #7a6200;
+}
+
+.smsw-block-warning-dot {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #f0b429;
+	color: #1A1A1A;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	flex-shrink: 0;
+}
+
+.smsw-ai-card {
+	margin: 0 0 10px;
+	padding: 10px 12px;
+	border: 1px solid var(--smsw-border);
+	border-left: 4px solid var(--smsw-accent);
+	border-radius: 2px;
+	background: var(--smsw-panel);
+}
+
+.smsw-ai-card-text {
+	margin: 0 0 8px;
+	color: var(--smsw-body);
+}
+
+.smsw-ai-card-actions {
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+/* Dismiss removes one card; it is visually quieter than the primary
+   "use this suggestion" action it sits next to. */
+.smsw-ai-card-actions .smsw-ai-card-dismiss {
+	color: #b32d2e;
+}
+
+/* Empty-result message: positive feedback, not an error. */
+.smsw-ai-covered {
+	margin: 0;
+	color: var(--smsw-body);
+}
+
+.smsw-ai-full-content-warning {
+	color: #b32d2e;
+	font-weight: 600;
+}
+
+.smsw-ai-model-note {
+	margin-top: 4px;
+}
+
+/* The Model field hosts one <select> per provider; only the active one is
+   visible. The hidden templates get a deliberately strong selector so no
+   theme or WordPress-core rule touching .widefat can re-show them: several
+   visible selects would each print their own placeholder and overlap the
+   description below. */
+#smsw-ai-model-field select.smsw-ai-model-select[hidden] {
+	display: none !important;
+}
+
+/* The visible select is pinned into normal document flow: block level, no
+   positioning, no float, one row. That keeps it from collapsing into or being
+   drawn over the description that follows it. */
+#smsw-ai-model-field select.smsw-ai-model-select {
+	display: block;
+	position: static;
+	float: none;
+	width: 100%;
+	margin: 0 0 4px;
+}
+
+.smsw-ai-full-content-field label {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 600;
+}
+
+.smsw-metabox-actions .button {
+	margin-right: 6px;
+	margin-bottom: 6px;
+}
+
+.smsw-copy-test-btn {
+	background: var(--smsw-accent) !important;
+	border-color: var(--smsw-accent) !important;
+	color: #FFFFFF !important;
+}
+
+.smsw-copy-test-btn:hover {
+	background: var(--smsw-accent-hover) !important;
+	border-color: var(--smsw-accent-hover) !important;
+}
+
+.smsw-copy-test-btn:disabled,
+.smsw-copy-test-btn[disabled] {
+	background: var(--smsw-panel) !important;
+	border-color: var(--smsw-border) !important;
+	color: var(--smsw-body) !important;
+	cursor: not-allowed;
+	opacity: 0.55;
+}
+
+.smsw-copy-notice {
+	background: var(--smsw-panel);
+	border: 1px solid var(--smsw-accent);
+	border-left: 4px solid var(--smsw-accent);
+	color: var(--smsw-body);
+	padding: 10px 14px;
+	margin: 10px 0 0;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.smsw-copy-dismiss {
+	color: var(--smsw-accent);
+	cursor: pointer;
+	margin-left: 8px;
+	text-decoration: none;
+}
+
+.smsw-copy-dismiss:hover {
+	color: var(--smsw-accent-hover);
+	text-decoration: none;
+}
+
+
+.smsw-admin-bar-label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+	/* Per schema block recursive nested sub-forms. */
+	.smsw-nested-form {
+		margin: 8px 0 8px 14px;
+		padding: 10px 12px;
+		background: #eaf6ff;
+		border: 1px solid #d0e5f5;
+		border-radius: 4px;
+	}
+
+	.smsw-nested-form > summary {
+		cursor: pointer;
+		font-weight: 600;
+		color: #1a1a1a;
+		margin-bottom: 8px;
+	}
+
+	.smsw-nested-form .smsw-nested-type {
+		font-weight: 400;
+		color: #2271b1;
+		font-size: 12px;
+	}
+
+	.smsw-nested-form .smsw-properties {
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		border: 0;
+	}
+
+	.smsw-nested-form .smsw-properties-title {
+		display: none;
+	}
+
+	.smsw-nested-form .smsw-empty-props {
+		color: #1a1a1a;
+		margin: 0;
+	}
+
+	.smsw-preview-copy {
+		flex-shrink: 0;
+	}
+
+@media (max-width: 782px) {
+	.smsw-block-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.smsw-settings-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.smsw-seo-widget {
+		margin-left: 0;
+		padding-left: 0;
+		align-items: flex-start;
+	}
+
+	.smsw-seo-widget-label {
+		text-align: left;
+	}
+
+	.smsw-seo-cta-alt {
+		margin-left: 0;
+		padding-left: 0;
+		border-left: 0;
+	}
+
+	.smsw-checklist {
+		columns: 1;
+	}
+
+	.smsw-validation-buttons {
+		flex-direction: column;
+	}
+
+	.smsw-validation-buttons .button {
+		width: 100%;
+		min-width: 0;
+	}
+}
+
+#smsw-add-block,
+#smsw-site-add-block,
+#smsw-validation-add {
+	background: #00a32a !important;
+	border-color: #00a32a !important;
+	color: #FFFFFF !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#smsw-add-block:hover,
+#smsw-site-add-block:hover,
+#smsw-validation-add:hover {
+	background: #007f1f !important;
+	border-color: #007f1f !important;
+	color: #FFFFFF !important;
+}
+
+.smsw-float-preview-area {
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.smsw-float-preview-anchor {
+	position: sticky;
+	top: var(--smsw-float-sticky-top, 46px);
+	right: 0;
+	width: 100%;
+	height: auto;
+	z-index: 10;
+	box-sizing: border-box;
+}
+
+.smsw-float-preview {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 260px;
+	max-height: var(--smsw-float-max-h, 100%);
+	overflow-y: auto;
+	box-sizing: border-box;
+	background: var(--smsw-bg);
+	border: 1px solid var(--smsw-border);
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+	padding: 30px 12px 12px;
+}
+
+.smsw-float-preview-code {
+	margin: 0;
+	overflow-x: auto;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 13px;
+	line-height: 1.5;
+	background: var(--smsw-bg);
+	color: var(--smsw-body);
+	white-space: pre;
+	box-sizing: border-box;
+}
+
+.smsw-float-preview-close {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 22px;
+	height: 22px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid var(--smsw-border);
+	background: var(--smsw-bg);
+	color: var(--smsw-body);
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 0;
+}
+
+.smsw-float-preview-copy {
+	position: absolute;
+	top: 2px;
+	right: 28px;
+	height: 22px;
+	line-height: 20px;
+	padding: 0 8px;
+	border: 1px solid var(--smsw-accent);
+	background: var(--smsw-accent);
+	color: #FFFFFF;
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.smsw-float-preview-copy:hover {
+	background: var(--smsw-accent-hover);
+	border-color: var(--smsw-accent-hover);
+	color: #FFFFFF;
+}
+
+.smsw-float-preview-copy.is-copied {
+	background: #00a32a;
+	border-color: #00a32a;
+	color: #FFFFFF;
+}
+
+.smsw-nested-entry-actions {
+	margin: 4px 0 0;
+	text-align: left;
+}
+
+.smsw-nested-actions {
+	margin: 8px 0 0;
+}
+
+.smsw-nested-entries .smsw-nested-entry + .smsw-nested-entry {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px dashed var(--smsw-border);
+}
+
+/* -------------------------------------------------------------------------
+ * AI BYOK API key field with the show/hide eye toggle.
+ * ---------------------------------------------------------------------- */
+
+.smsw-key-wrap {
+	position: relative;
+	display: block;
+}
+
+.smsw-key-wrap .smsw-key-input {
+	padding-right: 44px;
+}
+
+.smsw-key-eye {
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	transform: translateY(-50%);
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background: transparent;
+	box-shadow: none;
+	color: #50575e;
+	line-height: 1;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.smsw-key-eye:hover,
+.smsw-key-eye:focus-visible {
+	color: #2271b1;
+	background: #f0f6fc;
+	border-color: #c3e4f7;
+}
+
+.smsw-key-eye:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 1px;
+}
+
+.smsw-key-eye svg {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+.smsw-key-eye svg[hidden] {
+	display: none;
+}
+
+/* ------------------------------------------------------------------------
+ * AI BYOK save result shown directly below the Save button.
+ * --------------------------------------------------------------------- */
+
+.smsw-ai-save-row {
+	display: block;
+	margin: 0 0 8px;
+}
+
+.smsw-ai-save-notice {
+	margin: 0 0 16px;
+}
+
+.smsw-ai-save-notice p {
+	margin: 0.5em 0;
+}
+
+/* ------------------------------------------------------------------------
+ * About tab.
+ * --------------------------------------------------------------------- */
+
+.smsw-about-hero {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.smsw-about-title {
+	margin: 0;
+	font-size: 24px;
+}
+
+.smsw-about-tagline {
+	margin: 0;
+	color: #646982;
+}
+
+.smsw-about-actions {
+	display: flex;
+	gap: 12px;
+	margin-top: 16px;
+}
+
+.smsw-about-btn {
+	text-decoration: none;
+}
+
+/* Policy links and the social icon row, shared by the About tab and the footer. */
+.smsw-policy-links {
+	display: flex;
+	gap: 22px;
+	margin: 20px 0 0;
+	font-size: 13px;
+}
+
+.smsw-policy-links a {
+	color: var(--smsw-accent);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.smsw-policy-links a:hover,
+.smsw-policy-links a:focus {
+	color: var(--smsw-accent-hover);
+}
+
+.smsw-social-links {
+	list-style: none;
+	margin: 16px 0 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.smsw-social-links li {
+	display: flex;
+	line-height: 0;
+}
+
+.smsw-social-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--smsw-body);
+	opacity: 0.75;
+	transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.smsw-social-links a:hover,
+.smsw-social-links a:focus {
+	color: var(--smsw-accent);
+	opacity: 1;
+}
+
+.smsw-social-links svg {
+	display: block;
+}
+
+/* ------------------------------------------------------------------------
+ * SEO services header widget and the SEO Services tab.
+ * The widget sits at the right of the settings header on every tab.
+ * --------------------------------------------------------------------- */
+
+.smsw-seo-widget {
+	margin-left: auto;
+	padding-left: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 4px;
+	flex-shrink: 0;
+}
+
+.smsw-seo-widget-label {
+	color: var(--smsw-accent);
+	/* 14px: one step up from the old 12px, matching the 14px advanced-toggle
+	 * label. Keeps the widget readable without turning it into a banner. */
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: right;
+	font-weight: 600;
+}
+
+.smsw-seo-widget-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.smsw-seo-widget-list li {
+	display: flex;
+	line-height: 0;
+}
+
+.smsw-seo-widget-list a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--smsw-accent);
+	/* 0.85: up from 0.7 so the icons read clearly at 22px without shouting. */
+	opacity: 0.85;
+	transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.smsw-seo-widget-list a:hover,
+.smsw-seo-widget-list a:focus {
+	color: var(--smsw-accent);
+	opacity: 1;
+}
+
+.smsw-seo-widget-list svg {
+	display: block;
+}
+
+.smsw-seo-services h3 {
+	color: var(--smsw-heading);
+	margin: 24px 0 8px;
+	font-size: 1rem;
+}
+
+.smsw-seo-service-list,
+.smsw-seo-reason-list {
+	margin: 0 0 8px;
+	padding-left: 20px;
+}
+
+.smsw-seo-service-list li,
+.smsw-seo-reason-list li {
+	margin-bottom: 6px;
+}
+
+.smsw-seo-service-list strong {
+	color: var(--smsw-heading);
+}
+
+.smsw-seo-cta-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.smsw-seo-cta {
+	text-decoration: none;
+}
+
+.smsw-seo-cta-alt {
+	margin-left: 4px;
+	padding-left: 20px;
+	border-left: 1px solid var(--smsw-border);
+}
+
+.smsw-seo-footer-line {
+	margin: 16px 0 0;
+	color: var(--smsw-body);
+	opacity: 0.85;
+	font-size: 12px;
+}
+
+/* ------------------------------------------------------------------------
+ * Full-screen schema editor modal opened from the side panel button.
+ * The main postbox stays registered in context normal so native
+ * meta saving keeps working through the DOM.
+ * --------------------------------------------------------------------- */
+
+.smsw-fullscreen-modal {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	max-width: none !important;
+	margin: 0 !important;
+	padding: 24px 32px !important;
+	z-index: 999999 !important;
+	background: #f0f0f1 !important;
+	overflow-y: auto !important;
+	box-sizing: border-box !important;
+}
+
+body.smsw-modal-open {
+	overflow: hidden;
+}
+
+.smsw-fullscreen-modal .postbox-header,
+.smsw-fullscreen-modal h2.hndle {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background: #f0f0f1;
+}
+
+/* Static close button for the schema modal — hidden until the modal is
+   active, then it sits in the postbox header row. */
+.smsw-modal-close {
+    display: none;
+    margin-left: auto;
+    margin-right: 8px;
+    padding: 6px 16px;
+    background: #d63638;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    line-height: 1.4;
+}
+#smsw_schema_blocks.smsw-fullscreen-modal .smsw-modal-close,
+body.smsw-modal-open #smsw_schema_blocks .smsw-modal-close {
+    display: inline-block;
+}
+#smsw_schema_blocks.smsw-fullscreen-modal .smsw-modal-close:hover,
+#smsw_schema_blocks.smsw-fullscreen-modal .smsw-modal-close:focus,
+body.smsw-modal-open #smsw_schema_blocks .smsw-modal-close:hover,
+body.smsw-modal-open #smsw_schema_blocks .smsw-modal-close:focus {
+    background: #b32d2e;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------------
+ * "Go to Schema Blocks" side meta box panel: button plus live count badge.
+ * The footer script binds the button by id and opens the main postbox as
+ * the full-screen modal declared above.
+ * --------------------------------------------------------------------- */
+
+.smsw-side-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 10px;
+	margin: 12px 0 4px;
+}
+
+/* Full width label: the narrow Gutenberg sidebar must never wrap the button
+   text onto a second awkward line. */
+.smsw-side-panel .smsw-side-panel-title {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 6px 10px;
+	line-height: 1.5;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Troubleshooting note under the jump button. This is not a muted hint: the
+ * button it explains has a known failure mode (Gutenberg can hide the meta box
+ * it targets), so the note is styled as a red alert in the same spirit as the
+ * block-level validation warnings, at full readable size.
+ *
+ * The rule targets the class on its own rather than as
+ * ".smsw-side-panel .smsw-side-panel-note". The panel was briefly rendered as
+ * a <p> containing this <p>, which is invalid HTML; the parser closed the
+ * outer element early, so the note ended up a SIBLING of the panel and the
+ * descendant selector matched nothing (verified with 0 querySelectorAll
+ * hits). A flat class selector cannot be defeated that way, and nothing else
+ * in the admin uses this class name. */
+.smsw-side-panel-note {
+	display: block;
+	margin: 0;
+	padding: 10px 12px;
+	border: 1px solid #d63638;
+	border-left: 4px solid #d63638;
+	border-radius: 2px;
+	background: #fcf0f1;
+	color: #d63638;
+	/* 13px, matching the count line below it, so the note reads at a glance
+	 * in the narrow Gutenberg sidebar without shrinking to a footnote. */
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+/* Warning glyph, drawn in CSS so the icon is not part of the translated
+ * string and stays aligned with the first line of text. */
+.smsw-side-panel-note::before {
+	content: "\26A0\FE0E";
+	margin-right: 6px;
+	font-weight: 700;
+}
+
+.smsw-side-panel-count {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6px;
+	font-size: 13px;
+	/* 700 so the block count reads as a deliberate figure next to the
+	 * instruction above it. Inherited by both the label and the number. */
+	font-weight: 700;
+	line-height: 1.4;
+	color: #1d2327;
+}
+
+.smsw-side-panel-count-label {
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* Explicit as well as inherited, so the label stays bold even if the
+	 * parent rule is ever overridden by a theme. */
+	font-weight: 700;
+}
+
+.smsw-side-panel-count-num {
+	display: inline-block;
+	flex: 0 0 auto;
+	min-width: 22px;
+	padding: 0 7px;
+	border: 1px solid var(--smsw-border);
+	border-radius: 11px;
+	background: var(--smsw-panel);
+	color: var(--smsw-accent);
+	font-weight: 700;
+	line-height: 18px;
+	text-align: center;
+}
+
+/* ---- Tiered property fields: essential vs advanced ---------------------
+ * A block renders only its essential properties by default. The rest live
+ * inside .smsw-advanced-panel, which the builder collapses with the HTML
+ * hidden attribute; [hidden] is restated here because several admin themes
+ * set display on panel-ish elements and would otherwise defeat it.
+ */
+
+.smsw-property-essential,
+.smsw-property-advanced {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 0 16px;
+}
+
+.smsw-advanced {
+	margin-top: 4px;
+	padding-top: 12px;
+	border-top: 1px solid var(--smsw-border);
+}
+
+.smsw-advanced-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	box-shadow: none;
+	color: var(--smsw-accent);
+	/* 14px: one step up from the old 12px, so the toggle reads as easily as
+	   the surrounding field labels (--smsw-font-base, 15px) while staying
+	   clearly subordinate to them because it keeps the lighter 600 weight,
+	   accent colour and caret icon. */
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.4;
+	cursor: pointer;
+	text-align: left;
+}
+
+.smsw-advanced-toggle:hover {
+	color: var(--smsw-accent);
+	text-decoration: underline;
+}
+
+.smsw-advanced-toggle:focus {
+	outline: 2px solid var(--smsw-accent);
+	outline-offset: 2px;
+}
+
+.smsw-advanced-caret {
+	display: inline-block;
+	/* 13px to keep the caret visually matched to the 14px toggle label. */
+	font-size: 13px;
+	line-height: 1;
+	transition: transform 0.15s ease-in-out;
+}
+
+.smsw-advanced-caret.is-open {
+	transform: rotate(180deg);
+}
+
+.smsw-advanced-panel {
+	margin-top: 12px;
+}
+
+.smsw-advanced-panel[hidden] {
+	display: none;
+}
+
+/* One-line example pulled from the schema.org description for the property. */
+.smsw-field-hint {
+	margin: 4px 0 0;
+	color: #646970;
+	font-size: 12px;
+	line-height: 1.4;
+}
+
+.smsw-field-hint code {
+	font-size: 11px;
+}
+
