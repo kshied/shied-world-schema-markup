@@ -611,6 +611,19 @@
 		var $hidden = opts.hiddenSel ? root.find(opts.hiddenSel).first() : $();
 		var $add = opts.addSel ? root.find(opts.addSel).first() : $();
 		var blocks = [];
+		// Block ids that are currently collapsed, keyed by block id.
+		//
+		// Blocks restored from the saved payload start collapsed, so a site with
+		// several saved blocks opens as a short list of headers instead of
+		// hundreds of expanded fields. A block the user just added or
+		// duplicated is absent from this map, so it still opens expanded and
+		// ready to be filled in.
+		//
+		// Holding the state per id rather than only as a DOM class is what makes
+		// it survive a re-render: renderAll() rebuilds the markup from the data,
+		// and without this map a re-render for one type would silently expand
+		// every other block the user had collapsed.
+		var collapsedIds = {};
 		var defsCache = {};
 		var pendingDefs = {};
 
@@ -652,7 +665,9 @@
 			var parsed = rawBlocks ? JSON.parse(rawBlocks) : [];
 			if (Object.prototype.toString.call(parsed) === '[object Array]') {
 				for (var pi = 0; pi < parsed.length; pi++) {
-					blocks.push(normalizeBlock(parsed[pi]));
+					var loaded = normalizeBlock(parsed[pi]);
+					blocks.push(loaded);
+					collapsedIds[loaded.id] = true;
 				}
 			}
 		} catch (e) {
@@ -839,9 +854,10 @@
 			return out;
 		}		function blockHtml(b, loadingProps) {
 			var warns = computeWarnings(b);
-			return '<div class="smsw-block' + (loadingProps ? ' smsw-block-loading' : '') + '" data-block-id="' + escHtml(b.id) + '">' +
+			var collapsed = !!collapsedIds[b.id];
+			return '<div class="smsw-block' + (loadingProps ? ' smsw-block-loading' : '') + (collapsed ? ' is-collapsed' : '') + '" data-block-id="' + escHtml(b.id) + '">' +
 				'<div class="smsw-block-header">' +
-					'<button type="button" class="smsw-block-chevron" data-smsw-action="collapse" aria-label="Toggle">\u25BE</button>' +
+					'<button type="button" class="smsw-block-chevron" data-smsw-action="collapse" aria-expanded="' + (collapsed ? 'false' : 'true') + '" aria-label="Toggle">\u25BE</button>' +
 					'<span class="smsw-block-title-wrap">' +
 						'<span class="smsw-block-title" data-name="' + escHtml(b.name) + '">' + escHtml(b.name || t('newBlock')) + '</span>' +
 						'<input type="text" class="smsw-name-input" value="' + escHtml(b.name) + '" placeholder="' + escHtml(t('newBlock')) + '" hidden />' +
@@ -860,6 +876,39 @@
 				'</div>';
 		}
 
+		/**
+		 * Force every block that has no chosen schema type to show an empty
+		 * type box.
+		 *
+		 * A type box must only ever show a type the owner actually picked. Some
+		 * browsers autofill text inputs before any script runs and ignore
+		 * autocomplete="off" (notably Chrome, and especially on fields with no
+		 * name attribute), which left a previously entered value such as
+		 * "Organization" sitting in the Schema type box of a brand new block.
+		 * The stored type is the source of truth, so an empty stored type means
+		 * the visible box is emptied again.
+		 *
+		 * A field the user is typing in right now is skipped, so this can never
+		 * fight live input.
+		 *
+		 * @return {void}
+		 */
+		function clearUnchosenTypeInputs() {
+			$blocks.children('.smsw-block').each(function () {
+				var $b = $(this);
+				if (($b.find('[data-block-role="type"]').first().val() || '') !== '') {
+					return;
+				}
+				var $in = $b.find('.smsw-type-input').first();
+				if (!$in.length || document.activeElement === $in[0]) {
+					return;
+				}
+				if ($in.val()) {
+					$in.val('');
+				}
+			});
+		}
+
 		function renderAll() {
 			var html = '';
 			var i;
@@ -869,6 +918,7 @@
 				html += blockHtml(b, loading);
 			}
 			$blocks.html(html);
+			clearUnchosenTypeInputs();
 		}
 
 		function readBlockFromDom($el, fallback) {
@@ -1119,7 +1169,13 @@
 			blocks.push(b);
 			renderAll();
 			var $el = $blocks.children('.smsw-block[data-block-id="' + b.id + '"]');
+			// A block the user just added is the one being worked on, so it is
+			// kept expanded even though blocks restored from saved data start
+			// collapsed. Recorded in the map as well, so the re-render that
+			// follows a lazy property load cannot collapse it again.
+			delete collapsedIds[b.id];
 			$el.removeClass('is-collapsed');
+			$el.find('.smsw-block-chevron').attr('aria-expanded', 'true');
 			sync();
 			if (!isCustomType(chosen) && typeExists(chosen) && !propsFor(chosen)) {
 				ensureProps(chosen, function () {
@@ -1273,7 +1329,20 @@
 			if ( ! claimRoot( root ) ) { return; }
 			refreshRefs( root );
 			e.preventDefault();
-			$(this).closest('.smsw-block').toggleClass('is-collapsed');
+			var $block = $(this).closest('.smsw-block');
+			$block.toggleClass('is-collapsed');
+			// Record the new state against the block id so the next render
+			// restores it, and keep aria-expanded in step for screen readers.
+			var nowCollapsed = $block.hasClass('is-collapsed');
+			var blockId = $block.attr('data-block-id');
+			if (blockId) {
+				if (nowCollapsed) {
+					collapsedIds[blockId] = true;
+				} else {
+					delete collapsedIds[blockId];
+				}
+			}
+			$(this).attr('aria-expanded', nowCollapsed ? 'false' : 'true');
 		});
 
 		// Expand/collapse the advanced property group.
@@ -1536,6 +1605,14 @@
 			$el.children('.smsw-float-preview-area').remove();
 			if ($el.hasClass('is-collapsed')) {
 				$el.removeClass('is-collapsed');
+				// The preview only fits beside an expanded block, so the
+				// expanded state is recorded too. Without this the next
+				// render would collapse the block under the open preview.
+				var openBlockId = $el.attr('data-block-id');
+				if (openBlockId) {
+					delete collapsedIds[openBlockId];
+				}
+				$el.find('.smsw-block-chevron').attr('aria-expanded', 'true');
 			}
 			syncFromDom();
 			var idx = $blocks.children('.smsw-block').index($el);

@@ -105,14 +105,46 @@ class SMSW_Settings {
 	}
 
 	/**
-	 * Sanitize site schema from hidden JSON field or direct array.
+	 * Sanitize site schema from the builder's hidden JSON field.
+	 *
+	 * A failed read must never destroy blocks that are already saved. The
+	 * post meta box already refuses to write when it cannot read the payload
+	 * and reports the reason; this callback applies the same rule, because
+	 * options.php would otherwise store an empty array and the Site Schema
+	 * would silently stop outputting with no error shown on screen.
 	 *
 	 * @param mixed $value Incoming value.
 	 * @return array<int,array<string,mixed>>
 	 */
 	public static function sanitize_site_schema( $value ) {
 		if ( is_string( $value ) ) {
-			$value = json_decode( wp_unslash( $value ), true );
+			// options.php already applies wp_unslash() to every posted option
+			// value before this sanitize_option filter runs. Unslashing here
+			// a second time would eat the backslash escapes inside the JSON
+			// string, so a single saved value containing a quote or a
+			// backslash would turn the whole payload into invalid JSON.
+			$payload = trim( $value );
+
+			// An empty field means the builder wrote nothing, not that the
+			// owner wants the stored blocks deleted. Deleting every block
+			// this way would fire whenever the builder JavaScript did not
+			// run, which is exactly the silent failure this guards against.
+			if ( '' === $payload ) {
+				return SMSW_Options::get_site_schema();
+			}
+
+			$decoded = json_decode( $payload, true );
+			if ( JSON_ERROR_NONE !== json_last_error() || ! is_array( $decoded ) ) {
+				add_settings_error(
+					'smsw_messages',
+					'smsw_site_schema',
+					__( 'SHIED WORLD Schema Markup could not save the Site Schema because the block data could not be read. Your previously saved blocks were left unchanged. Reload this page and try again.', 'shied-world-schema-markup' ),
+					'error'
+				);
+				return SMSW_Options::get_site_schema();
+			}
+
+			$value = $decoded;
 		}
 
 		$result = SMSW_Block_Sanitizer::sanitize_blocks( $value );

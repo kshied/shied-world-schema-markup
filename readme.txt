@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
 Tested up to PHP: 8.4
-Stable tag: 1.0.0
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -113,6 +113,20 @@ Privacy Policy: https://shiedworld.com/privacy-policy-shied-world-schema-markup/
 Terms and Conditions: https://shiedworld.com/terms-conditions-shied-world-schema-markup/
 
 == Changelog ==
+
+= 1.0.3 =
+* A brand new schema block now always opens with an empty Schema type box, so the type is chosen deliberately instead of appearing already filled in. Some browsers autofill text inputs before any page script runs and ignore autocomplete="off", which could leave a value such as Organization sitting in the box of a block that has no type set.
+* A block that does have a type chosen normally keeps showing it. Only a box whose stored type is still empty is emptied again, and a box you are typing in at that moment is left alone.
+
+= 1.0.2 =
+* Schema blocks now start collapsed. A site with several saved blocks reopened every block fully expanded on each page load, which made the Site Schema tab and the post editor very long and left the saved blocks hard to scan. Blocks loaded from saved data now appear as a compact list of headers.
+* A block you add or duplicate still opens expanded and ready to fill in. Each block also keeps its own open or closed state while you work on the others, so adding one block no longer expands every other block at the same time.
+* The block collapse control now reports its open or closed state to screen readers through aria-expanded.
+
+= 1.0.1 =
+* Fixed the Site Schema tab silently failing to save. Saving could store an empty value and report no error, so the site-wide schema never reached the frontend output. The save now keeps your previously saved blocks when the submitted data cannot be read, and shows a clear message instead of failing quietly.
+* Site Schema: a value containing a quote or a backslash (for example a business name written as Say "Hello" Ltd) is now saved correctly. The block data was previously unescaped twice by WordPress, which corrupted the stored JSON.
+* Site Schema: saving with the builder script not loaded no longer deletes every saved block.
 
 = 1.0.0 =
 * Initial release.
